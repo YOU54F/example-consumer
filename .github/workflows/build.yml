@@ -30,7 +30,7 @@ jobs:
         run: make test
       - uses: you54f/pact-broker-cli@main
       - name: Publish pacts between pactflow-example-consumer and ${{ env.PACT_PROVIDER }}
-        run: pact-broker-cli pact-broker publish pacts --auto-detect-version-properties
+        run: pact-broker-cli pact-broker publish --dir pacts --auto-detect-version-properties
 
   # Runs on branches as well, so we know the status of our PRs
   can-i-deploy:
